@@ -37,7 +37,6 @@ var common = {
 		$('.menu-trigger').click(function(event){
 			event.preventDefault();
 			$('.header').toggleClass('open');
-			$('.header-bottom').slideToggle('fast');
 			$('body').toggleClass('hidden');
 		});
 
@@ -164,23 +163,17 @@ var common = {
 
 
 
-		var revSlider = $('.rev-slider');
+		var bannerSlider = $('.banner-slider');
 
-		revSlider.owlCarousel({
+		bannerSlider.owlCarousel({
 			loop:true,
 			items: 1,
 			margin:0,
 			nav: true,
-			dots: true,
+			dots: false,
 			autoHeight: true,
-			responsive:{
-				0:{
-					items:1,
-				},
-				551:{
-					items:1
-				},
-			}
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
 		});
 
 		$('.owl-carousel').on('translated.owl.carousel', function(event) {
