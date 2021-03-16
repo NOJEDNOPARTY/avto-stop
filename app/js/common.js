@@ -8,17 +8,10 @@ var common = {
 	},
 	fixNavigation: function(){
 		function fixPanel() {
-			if ($(window).width() > 992)  {
-				if ($('.header-top').outerHeight() < $(window).scrollTop()) {
-					$('.header').addClass('fixed');
-					$('.header').css({'margin-bottom': $('.header-bottom').outerHeight()})
-				}else {
-					$('.header').removeClass('fixed')
-					$('.header').css({'margin-bottom':0})
-				}
-			}else {
+			if ($(window).scrollTop() > 0) {
 				$('.header').addClass('fixed');
-				$('.header').css({'margin-bottom': $('.header-top').outerHeight()})
+			}else {
+				$('.header').removeClass('fixed')
 			}
 		};
 		fixPanel();
@@ -32,12 +25,25 @@ var common = {
 	},
 	main: function(){
 
-		// menu-trigger
-
 		$('.menu-trigger').click(function(event){
 			event.preventDefault();
 			$('.header').toggleClass('open');
 			$('body').toggleClass('hidden');
+		});
+
+		$('.show-more-trigger').click(function(event){
+			event.preventDefault();
+			thisTrigger = $(this).find('span');
+			var show = $(this).attr('data-show');
+			var hide = $(this).attr('data-hide');
+			var wrap = $(this).closest('.show-more-wrap');
+			if(wrap.hasClass('active') == false) {
+				wrap.addClass('active');
+				thisTrigger.text(show)
+			}else {
+				wrap.removeClass('active');
+				thisTrigger.text(hide)
+			}
 		});
 
 		// b-lazy
@@ -77,14 +83,6 @@ var common = {
 			});
 		});
 
-		// form row change
-
-		$('.form-row input').keyup(function(){
-			if($(this).val() == '') {
-				$(this).closest('.form-row').removeClass('active')
-			}else {$(this).closest('.form-row').addClass('active')}
-		});
-
 		// popups call
 		$('.call-popup').click(function(event){
 			event.preventDefault();
@@ -115,6 +113,34 @@ var common = {
 		// phone mask
 		$('.tel-trigger').mask("+7(999) 999-99-99");
 
+		$('.cart-trigger').on('click', function(e){
+			e.preventDefault();
+			var that = $(this).closest('.cart-trigger-item').find('.cart-trigger-item-img');
+			var cart = $(".cart");
+			var cartNum = cart.find('span');
+			var cartNumCount = Number(cartNum.text());
+			var w = that.width();
+			
+			that.clone()
+				.css({'width' : w,
+				'position' : 'absolute',
+				'z-index' : '9999',
+				top: that.offset().top,
+				left:that.offset().left})
+				.appendTo("body")
+				.animate({opacity: 0.05,
+					left: cart.offset()['left'],
+					top: cart.offset()['top'],
+					width: 20}, 1000, function() {  
+						$(this).remove();
+			});
+			
+
+			cartNumCount++
+			setTimeout(function(){
+				cartNum.text(cartNumCount);
+			}, 1000)
+		});
 		
 
 	},

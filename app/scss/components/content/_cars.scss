@@ -1,0 +1,63 @@
+.cars {
+    padding: 111px 0 100px;
+    @media (max-width: 767px) {
+        padding: 208px 0 100px;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% / 7);
+            padding: 0 5px;
+            margin-bottom: 55px;
+            @media (max-width: 767px) {
+                margin-bottom: 60px;
+                width: calc(100% / 4);
+            }
+            @media (max-width: 500px) {
+                width: calc(100% / 2);
+            }
+            
+            @media (min-width: 768px) {
+                &:nth-child(n+29) {
+                    display: none;
+                }
+            }
+            @media (max-width: 767px and (min-width: 501px)) {
+                &:nth-child(n+21) {
+                    display: none;
+                }
+            }
+            @media (max-width: 500px) {
+                &:nth-child(n+11) {
+                    display: none;
+                }
+            }
+        }
+        &.active {
+            & a {
+                &:nth-child(n+29) {
+                    display: block;
+                }
+            }
+        }
+        & .btn {
+            display: inline-block !important;
+            width: 100%;
+            max-width: 220px;
+            margin: -15px auto 0;
+        }
+    }
+}
+
+.btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
