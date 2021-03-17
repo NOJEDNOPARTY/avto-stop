@@ -1,4 +1,9 @@
 .catalog {
+    &-new,
+    &-popular {
+        padding: 0 0 70px;
+        overflow: hidden;
+    }
     &-list {
         @media (max-width: 767px) {
             width: calc(100% + 16px);
@@ -211,8 +216,3 @@
     }
 }
 
-
-.new {
-    padding: 0 0 70px;
-    overflow: hidden;
-}

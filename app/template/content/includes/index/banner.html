@@ -101,30 +101,46 @@
         <div class="wrapper">
             <form action="#">
                 <div class="search-row">
-                    <div class="custom-select">
-                        <select>
-                            <option value="0">Марка</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="custom-select">
-                        <select>
-                            <option value="0">Модель</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="custom-select">
-                        <select>
-                            <option value="0">Опция</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
+                    <select class="basic-select"   name="car" placeholder="Select a state">
+                        <option selected disabled value="0">Марка</option>
+                        <optgroup label="Грузовая">
+                          <option value="AK">BMW1</option>
+                          <option value="HI">BMW2</option>
+                        </optgroup>
+                        <optgroup label="Хачбек">
+                          <option value="CA">Toyota1</option>
+                          <option value="NV">Toyota2</option>
+                          <option value="OR">Toyota3</option>
+                          <option value="WA">Toyota4</option>
+                        </optgroup>
+                        <optgroup label="Универсал">
+                          <option value="AZ">Mercedes1</option>
+                          <option value="CO">Mercedes2</option>
+                          <option value="ID">Mercedes3</option>
+                        </optgroup>
+                    </select>
+                    <select class="basic-select"  name="model">
+                        <option selected disabled value="0">Модель</option>
+                        <option value="AK">BMW1</option>
+                        <option value="HI">BMW2</option>
+                        <option value="HI">BMW2</option>
+                        <option value="HI">BMW2</option>
+                        <option value="HI">BMW2</option>
+                    </select>
+                    <select class="basic-select"  name="option">
+                        <option selected disabled value="0">Опция</option>
+                        <optgroup label="Хачбек">
+                          <option value="CA">Toyota1</option>
+                          <option value="NV">Toyota2</option>
+                          <option value="OR">Toyota3</option>
+                          <option value="WA">Toyota4</option>
+                        </optgroup>
+                        <optgroup label="Универсал">
+                          <option value="AZ">Mercedes1</option>
+                          <option value="CO">Mercedes2</option>
+                          <option value="ID">Mercedes3</option>
+                        </optgroup>
+                    </select>
                     <button class="btn"><span>Поиск</span></button>
                 </div>
             </form>

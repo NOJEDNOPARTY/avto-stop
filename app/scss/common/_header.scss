@@ -226,7 +226,10 @@
                     color: #FFFFFF;
                     background: #A50000;
                     border-radius: 50%;
+                    transition: 0.3s ease;
+                    opacity: 0;
                 }
+                &.active span {opacity: 1;}
             }
         }
     }

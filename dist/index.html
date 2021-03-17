@@ -43,6 +43,8 @@
 	
 	<link rel="stylesheet" href="css/libs/flex/flexboxgrid.min.css">
 	
+	<link rel="stylesheet" href="css/libs/select/select2.min.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -211,30 +213,46 @@
                     <div class="wrapper">
                         <form action="#">
                             <div class="search-row">
-                                <div class="custom-select">
-                                    <select>
-                                        <option value="0">Марка</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>
-                                <div class="custom-select">
-                                    <select>
-                                        <option value="0">Модель</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>
-                                <div class="custom-select">
-                                    <select>
-                                        <option value="0">Опция</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                </div>
+                                <select class="basic-select"   name="car" placeholder="Select a state">
+                                    <option selected disabled value="0">Марка</option>
+                                    <optgroup label="Грузовая">
+                                      <option value="AK">BMW1</option>
+                                      <option value="HI">BMW2</option>
+                                    </optgroup>
+                                    <optgroup label="Хачбек">
+                                      <option value="CA">Toyota1</option>
+                                      <option value="NV">Toyota2</option>
+                                      <option value="OR">Toyota3</option>
+                                      <option value="WA">Toyota4</option>
+                                    </optgroup>
+                                    <optgroup label="Универсал">
+                                      <option value="AZ">Mercedes1</option>
+                                      <option value="CO">Mercedes2</option>
+                                      <option value="ID">Mercedes3</option>
+                                    </optgroup>
+                                </select>
+                                <select class="basic-select"  name="model">
+                                    <option selected disabled value="0">Модель</option>
+                                    <option value="AK">BMW1</option>
+                                    <option value="HI">BMW2</option>
+                                    <option value="HI">BMW2</option>
+                                    <option value="HI">BMW2</option>
+                                    <option value="HI">BMW2</option>
+                                </select>
+                                <select class="basic-select"  name="option">
+                                    <option selected disabled value="0">Опция</option>
+                                    <optgroup label="Хачбек">
+                                      <option value="CA">Toyota1</option>
+                                      <option value="NV">Toyota2</option>
+                                      <option value="OR">Toyota3</option>
+                                      <option value="WA">Toyota4</option>
+                                    </optgroup>
+                                    <optgroup label="Универсал">
+                                      <option value="AZ">Mercedes1</option>
+                                      <option value="CO">Mercedes2</option>
+                                      <option value="ID">Mercedes3</option>
+                                    </optgroup>
+                                </select>
                                 <button class="btn"><span>Поиск</span></button>
                             </div>
                         </form>
@@ -288,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="new">
+                <div class="catalog-new">
                     <div class="wrapper">
                         <h2 class="title-el"><span>Новинки</span></h2>
                         <div class="catalog-list">
@@ -457,6 +475,361 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="catalog-popular">
+                    <div class="wrapper">
+                        <h2 class="title-el title-el-center"><span>Популярные товары</span></h2>
+                        <div class="tabs-block">
+                            <div class="tabs-section-wrap">
+                                <div class="tabs-section">
+                                    <a href="#" class="btn tab-cnt-trigger active" data-cnt="tab-cnt-1"><span>Тормозные диски</span></a>
+                                    <a href="#" class="btn tab-cnt-trigger" data-cnt="tab-cnt-2"><span>Тормозные колодки</span></a>
+                                </div>
+                            </div>
+                            <div class="tabs-content card-info-content">
+                                <div class="tab-cnt tab-cnt-1 active">
+                                    <div class="catalog-list">
+                                        <div class="row center start-xs">
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-1.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <span>Задняя ось</span>
+                                                            <img src="./images/type-1.svg" alt="type">
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">4 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">4 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-2.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <img src="./images/type-2.svg" alt="type">
+                                                            <span>Передняя <br> ось</span>
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">4 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">4 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-3.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <span>Задняя ось</span>
+                                                            <img src="./images/type-1.svg" alt="type">
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">14 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">14 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-1.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <img src="./images/type-2.svg" alt="type">
+                                                            <span>Передняя <br> ось</span>
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">4 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">4 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cnt tab-cnt-2">
+                                    <div class="catalog-list">
+                                        <div class="row center start-xs">
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-3.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <span>Задняя ось</span>
+                                                            <img src="./images/type-1.svg" alt="type">
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">14 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">14 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-1.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <img src="./images/type-2.svg" alt="type">
+                                                            <span>Передняя <br> ось</span>
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">4 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">4 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-1.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <span>Задняя ось</span>
+                                                            <img src="./images/type-1.svg" alt="type">
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">4 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">4 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="catalog-list-item-wrap col-12 col-xs-6 col-sm-4 col-md-3">
+                                                <div class="catalog-list-item cart-trigger-item">
+                                                    <a href="card.html" class="catalog-list-item-img">
+                                                        <img class="cart-trigger-item-img" src="./images/cart-item-prev-2.png" alt="prev">
+                                                        <span class="catalog-list-item-type">
+                                                            <img src="./images/type-2.svg" alt="type">
+                                                            <span>Передняя <br> ось</span>
+                                                        </span>
+                                                    </a>
+                                                    <a href="card.html" class="catalog-list-item-title">Комплект тормозных дисков R1 CONCEPTS CARBON</a>
+                                                    <p class="catalog-list-item-stock">В наличии</p>
+                                                    <div class="catalog-list-item-price">
+                                                        <span class="catalog-list-item-price-new">4 000 грн</span>
+                                                        <span class="catalog-list-item-price-prev">4 200 грн</span>
+                                                    </div>
+                                                    <div class="catalog-list-item-bottom">
+                                                        <a href="#" class="btn btn-line cart-trigger"><span>Купить</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-info-wrap">
+                    <div class="banner-info">
+                        <div class="wrapper wrapper-l">
+                            <div class="banner-info-img">
+                                <img src="./images/banner-info-img-1.png" alt="banner-info-img-1">
+                            </div>
+                            <div class="banner-info-cnt-wrap">
+                                <div class="banner-info-cnt">
+                                    <h2>Новые возможности торможения</h2>
+                                    <p>Тормозные системы от R1 Concepts - получи максимум от тормозов</p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-info-wrap-img">
+                            <img src="./images/banner-info-wrap-img-1.png" alt="banner-info-wrap-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-prev">
+                    <div class="wrapper">
+                        <h2 class="title-el"><span>Блог</span></h2>
+                        <div class="blog-prev-row">
+                            <a href="blog.html" class="blog-prev-item-big">
+                                <span class="blog-prev-item-big-img"><img src="./images/blog-big.png" alt="blog"></span>
+                                <span class="blog-prev-item-big-bottom">
+                                    <span class="blog-prev-item-big-bottom-cnt">
+                                        <span class="blog-prev-item-date blog-prev-item-big-date">10.02.2020</span>
+                                        <span class="blog-prev-item-big-title">Тормозные диски на Toyota</span>
+                                    </span>
+                                    <span class="blog-prev-item-big-bottom-circle blog-prev-item-circle">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" >
+                                            <circle cx="20.0003" cy="19.9998" r="19.3998" fill="white" stroke="white" stroke-width="1.2"/>
+                                            <path class="circle-stroke" d="M19.9998 0.600365C23.1063 0.600365 26.1673 1.34637 28.9255 2.77563C31.6837 4.2049 34.0582 6.27562 35.8495 8.81362C37.6408 11.3516 38.7964 14.2827 39.2192 17.3603C39.6419 20.4379 39.3194 23.572 38.2787 26.4989C37.2381 29.4259 35.5098 32.0602 33.2391 34.1802C30.9685 36.3002 28.2219 37.8439 25.2305 38.6815C22.2391 39.5191 19.0903 39.6261 16.0489 38.9934C13.0075 38.3608 10.1625 37.007 7.75327 35.0459" stroke="#A50000" stroke-width="1.2"/>
+                                             <path class="circle-fill" d="M23.6364 20C23.6369 20.2124 23.5629 20.4183 23.4274 20.5818L18.8819 26.0363C18.7276 26.222 18.5059 26.3387 18.2655 26.3609C18.0251 26.3831 17.7858 26.3088 17.6001 26.1545C17.4145 26.0002 17.2977 25.7785 17.2756 25.5381C17.2534 25.2977 17.3276 25.0584 17.482 24.8727L21.5546 20L17.6274 15.1273C17.5519 15.0344 17.4955 14.9274 17.4615 14.8125C17.4274 14.6977 17.4165 14.5772 17.4291 14.4581C17.4418 14.339 17.4779 14.2235 17.5353 14.1184C17.5927 14.0133 17.6704 13.9206 17.7638 13.8455C17.8572 13.7623 17.9669 13.6992 18.0859 13.6603C18.2049 13.6214 18.3306 13.6075 18.4552 13.6195C18.5798 13.6314 18.7006 13.669 18.81 13.7298C18.9194 13.7906 19.0151 13.8733 19.091 13.9728L23.4819 19.4273C23.596 19.5956 23.6504 19.7972 23.6364 20Z" fill="#A50000"/>
+                                        </svg>                            
+                                    </span>
+                                </span>
+                            </a>
+                            <div class="blog-prev-row-blk">
+                                <a href="blog.html" class="blog-prev-item">
+                                    <span class="blog-prev-item-top">
+                                        <span class="blog-prev-item-date">10.02.2020</span>
+                                        <span class="blog-prev-item-circle">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" >
+                                                <circle cx="20.0003" cy="19.9998" r="19.3998" fill="white" stroke="white" stroke-width="1.2"/>
+                                                <path class="circle-stroke" d="M19.9998 0.600365C23.1063 0.600365 26.1673 1.34637 28.9255 2.77563C31.6837 4.2049 34.0582 6.27562 35.8495 8.81362C37.6408 11.3516 38.7964 14.2827 39.2192 17.3603C39.6419 20.4379 39.3194 23.572 38.2787 26.4989C37.2381 29.4259 35.5098 32.0602 33.2391 34.1802C30.9685 36.3002 28.2219 37.8439 25.2305 38.6815C22.2391 39.5191 19.0903 39.6261 16.0489 38.9934C13.0075 38.3608 10.1625 37.007 7.75327 35.0459" stroke="#A50000" stroke-width="1.2"/>
+                                                 <path class="circle-fill" d="M23.6364 20C23.6369 20.2124 23.5629 20.4183 23.4274 20.5818L18.8819 26.0363C18.7276 26.222 18.5059 26.3387 18.2655 26.3609C18.0251 26.3831 17.7858 26.3088 17.6001 26.1545C17.4145 26.0002 17.2977 25.7785 17.2756 25.5381C17.2534 25.2977 17.3276 25.0584 17.482 24.8727L21.5546 20L17.6274 15.1273C17.5519 15.0344 17.4955 14.9274 17.4615 14.8125C17.4274 14.6977 17.4165 14.5772 17.4291 14.4581C17.4418 14.339 17.4779 14.2235 17.5353 14.1184C17.5927 14.0133 17.6704 13.9206 17.7638 13.8455C17.8572 13.7623 17.9669 13.6992 18.0859 13.6603C18.2049 13.6214 18.3306 13.6075 18.4552 13.6195C18.5798 13.6314 18.7006 13.669 18.81 13.7298C18.9194 13.7906 19.0151 13.8733 19.091 13.9728L23.4819 19.4273C23.596 19.5956 23.6504 19.7972 23.6364 20Z" fill="#A50000"/>
+                                            </svg>                            
+                                        </span>
+                                    </span>
+                                    <span class="blog-prev-item-title">Тормозные диски на Toyota</span>
+                                    <span class="blog-prev-item-text">Очень часто, когда перед нами встает потребность купить тормозные диски на свою машину</span>
+                                </a>
+                                <a href="blog.html" class="blog-prev-item">
+                                    <span class="blog-prev-item-top">
+                                        <span class="blog-prev-item-date">10.02.2020</span>
+                                        <span class="blog-prev-item-circle">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" >
+                                                <circle cx="20.0003" cy="19.9998" r="19.3998" fill="white" stroke="white" stroke-width="1.2"/>
+                                                <path class="circle-stroke" d="M19.9998 0.600365C23.1063 0.600365 26.1673 1.34637 28.9255 2.77563C31.6837 4.2049 34.0582 6.27562 35.8495 8.81362C37.6408 11.3516 38.7964 14.2827 39.2192 17.3603C39.6419 20.4379 39.3194 23.572 38.2787 26.4989C37.2381 29.4259 35.5098 32.0602 33.2391 34.1802C30.9685 36.3002 28.2219 37.8439 25.2305 38.6815C22.2391 39.5191 19.0903 39.6261 16.0489 38.9934C13.0075 38.3608 10.1625 37.007 7.75327 35.0459" stroke="#A50000" stroke-width="1.2"/>
+                                                 <path class="circle-fill" d="M23.6364 20C23.6369 20.2124 23.5629 20.4183 23.4274 20.5818L18.8819 26.0363C18.7276 26.222 18.5059 26.3387 18.2655 26.3609C18.0251 26.3831 17.7858 26.3088 17.6001 26.1545C17.4145 26.0002 17.2977 25.7785 17.2756 25.5381C17.2534 25.2977 17.3276 25.0584 17.482 24.8727L21.5546 20L17.6274 15.1273C17.5519 15.0344 17.4955 14.9274 17.4615 14.8125C17.4274 14.6977 17.4165 14.5772 17.4291 14.4581C17.4418 14.339 17.4779 14.2235 17.5353 14.1184C17.5927 14.0133 17.6704 13.9206 17.7638 13.8455C17.8572 13.7623 17.9669 13.6992 18.0859 13.6603C18.2049 13.6214 18.3306 13.6075 18.4552 13.6195C18.5798 13.6314 18.7006 13.669 18.81 13.7298C18.9194 13.7906 19.0151 13.8733 19.091 13.9728L23.4819 19.4273C23.596 19.5956 23.6504 19.7972 23.6364 20Z" fill="#A50000"/>
+                                            </svg>                            
+                                        </span>
+                                    </span>
+                                    <span class="blog-prev-item-title">Тормозные диски на Toyota</span>
+                                    <span class="blog-prev-item-text">Очень часто, когда перед нами встает потребность купить тормозные диски на свою машину</span>
+                                </a>
+                                <a href="blog.html" class="blog-prev-item">
+                                    <span class="blog-prev-item-top">
+                                        <span class="blog-prev-item-date">10.02.2020</span>
+                                        <span class="blog-prev-item-circle">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" >
+                                                <circle cx="20.0003" cy="19.9998" r="19.3998" fill="white" stroke="white" stroke-width="1.2"/>
+                                                <path class="circle-stroke" d="M19.9998 0.600365C23.1063 0.600365 26.1673 1.34637 28.9255 2.77563C31.6837 4.2049 34.0582 6.27562 35.8495 8.81362C37.6408 11.3516 38.7964 14.2827 39.2192 17.3603C39.6419 20.4379 39.3194 23.572 38.2787 26.4989C37.2381 29.4259 35.5098 32.0602 33.2391 34.1802C30.9685 36.3002 28.2219 37.8439 25.2305 38.6815C22.2391 39.5191 19.0903 39.6261 16.0489 38.9934C13.0075 38.3608 10.1625 37.007 7.75327 35.0459" stroke="#A50000" stroke-width="1.2"/>
+                                                 <path class="circle-fill" d="M23.6364 20C23.6369 20.2124 23.5629 20.4183 23.4274 20.5818L18.8819 26.0363C18.7276 26.222 18.5059 26.3387 18.2655 26.3609C18.0251 26.3831 17.7858 26.3088 17.6001 26.1545C17.4145 26.0002 17.2977 25.7785 17.2756 25.5381C17.2534 25.2977 17.3276 25.0584 17.482 24.8727L21.5546 20L17.6274 15.1273C17.5519 15.0344 17.4955 14.9274 17.4615 14.8125C17.4274 14.6977 17.4165 14.5772 17.4291 14.4581C17.4418 14.339 17.4779 14.2235 17.5353 14.1184C17.5927 14.0133 17.6704 13.9206 17.7638 13.8455C17.8572 13.7623 17.9669 13.6992 18.0859 13.6603C18.2049 13.6214 18.3306 13.6075 18.4552 13.6195C18.5798 13.6314 18.7006 13.669 18.81 13.7298C18.9194 13.7906 19.0151 13.8733 19.091 13.9728L23.4819 19.4273C23.596 19.5956 23.6504 19.7972 23.6364 20Z" fill="#A50000"/>
+                                            </svg>                            
+                                        </span>
+                                    </span>
+                                    <span class="blog-prev-item-title">Тормозные диски на Toyota</span>
+                                    <span class="blog-prev-item-text">Очень часто, когда перед нами встает потребность купить тормозные диски на свою машину</span>
+                                </a>
+                                <a href="blog.html" class="blog-prev-item">
+                                    <span class="blog-prev-item-top">
+                                        <span class="blog-prev-item-date">10.02.2020</span>
+                                        <span class="blog-prev-item-circle">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" >
+                                                <circle cx="20.0003" cy="19.9998" r="19.3998" fill="white" stroke="white" stroke-width="1.2"/>
+                                                <path class="circle-stroke" d="M19.9998 0.600365C23.1063 0.600365 26.1673 1.34637 28.9255 2.77563C31.6837 4.2049 34.0582 6.27562 35.8495 8.81362C37.6408 11.3516 38.7964 14.2827 39.2192 17.3603C39.6419 20.4379 39.3194 23.572 38.2787 26.4989C37.2381 29.4259 35.5098 32.0602 33.2391 34.1802C30.9685 36.3002 28.2219 37.8439 25.2305 38.6815C22.2391 39.5191 19.0903 39.6261 16.0489 38.9934C13.0075 38.3608 10.1625 37.007 7.75327 35.0459" stroke="#A50000" stroke-width="1.2"/>
+                                                 <path class="circle-fill" d="M23.6364 20C23.6369 20.2124 23.5629 20.4183 23.4274 20.5818L18.8819 26.0363C18.7276 26.222 18.5059 26.3387 18.2655 26.3609C18.0251 26.3831 17.7858 26.3088 17.6001 26.1545C17.4145 26.0002 17.2977 25.7785 17.2756 25.5381C17.2534 25.2977 17.3276 25.0584 17.482 24.8727L21.5546 20L17.6274 15.1273C17.5519 15.0344 17.4955 14.9274 17.4615 14.8125C17.4274 14.6977 17.4165 14.5772 17.4291 14.4581C17.4418 14.339 17.4779 14.2235 17.5353 14.1184C17.5927 14.0133 17.6704 13.9206 17.7638 13.8455C17.8572 13.7623 17.9669 13.6992 18.0859 13.6603C18.2049 13.6214 18.3306 13.6075 18.4552 13.6195C18.5798 13.6314 18.7006 13.669 18.81 13.7298C18.9194 13.7906 19.0151 13.8733 19.091 13.9728L23.4819 19.4273C23.596 19.5956 23.6504 19.7972 23.6364 20Z" fill="#A50000"/>
+                                            </svg>                            
+                                        </span>
+                                    </span>
+                                    <span class="blog-prev-item-title">Тормозные диски на Toyota</span>
+                                    <span class="blog-prev-item-text">Очень часто, когда перед нами встает потребность купить тормозные диски на свою машину</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits">
+                    <div class="wrapper">
+                        <h2 class="title-el title-el-center"><span>Почему выбирают  нас</span></h2>
+                        <div class="benefits-row">
+                            <div class="bnf">
+                                <div class="bnf-img"><img src="./images/bnf-1.svg" alt="bnf"></div>
+                                <div class="bnf-cnt">
+                                    <p class="bnf-text-1">01</p>
+                                    <p class="bnf-text-2">Профессионалиный подбор комплектующих</p>
+                                </div>
+                            </div>
+                            <div class="bnf">
+                                <div class="bnf-img"><img src="./images/bnf-2.svg" alt="bnf"></div>
+                                <div class="bnf-cnt">
+                                    <p class="bnf-text-1">02</p>
+                                    <p class="bnf-text-2">Собственный склад  без посредников</p>
+                                </div>
+                            </div>
+                            <div class="bnf">
+                                <div class="bnf-img"><img src="./images/bnf-3.svg" alt="bnf"></div>
+                                <div class="bnf-cnt">
+                                    <p class="bnf-text-1">03</p>
+                                    <p class="bnf-text-2">Доставка по всей Украине</p>
+                                </div>
+                            </div>
+                            <div class="bnf">
+                                <div class="bnf-img"><img src="./images/bnf-4.svg" alt="bnf"></div>
+                                <div class="bnf-cnt">
+                                    <p class="bnf-text-1">04</p>
+                                    <p class="bnf-text-2">Только оригинальные тормозные диски и колодки</p>
+                                </div>
+                            </div>
+                            <div class="bnf">
+                                <div class="bnf-img"><img src="./images/bnf-5.svg" alt="bnf"></div>
+                                <div class="bnf-cnt">
+                                    <p class="bnf-text-1">05</p>
+                                    <p class="bnf-text-2">Удобная оплата картой и наличными</p>
+                                </div>
+                            </div>
+                            <div class="bnf">
+                                <div class="bnf-img"><img src="./images/bnf-6.svg" alt="bnf"></div>
+                                <div class="bnf-cnt">
+                                    <p class="bnf-text-1">06</p>
+                                    <p class="bnf-text-2">Специализированный магазин</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-info-wrap banner-info-wrap-2">
+                    <div class="banner-info">
+                        <div class="wrapper wrapper-l">
+                            <div class="banner-info-cnt-wrap">
+                                <div class="banner-info-cnt">
+                                    <h2>Тормозные колодки для любого стиля вождения</h2>
+                                    <p>Рекомендуется покупать не по одному изделию, а сразу комплект тормозных колодок для всех колёс.</p>
+                                </div>
+                            </div>
+                            <div class="banner-info-img">
+                                <img src="./images/banner-info-img-2.png" alt="banner-info-img-1">
+                            </div>
+                        </div>
+                        <div class="banner-info-wrap-img">
+                            <img src="./images/banner-info-wrap-img-2.png" alt="banner-info-wrap-img">
+                        </div>
+                    </div>
+                </div>
                 <div class="text-section">
                     <div class="wrapper">
                         <b>Система торможения автомобиля</b>
@@ -516,6 +889,7 @@
     <script src="js/libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/libs/blazy/blazy.min.js"></script>
     <script src="js/libs/wow.min.js"></script>
+    <script src="js/libs/select/select2.min.js"></script>
     
     <!--general-->
     <script src="js/common.js"></script>
