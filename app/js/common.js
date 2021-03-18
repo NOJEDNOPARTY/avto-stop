@@ -12,6 +12,13 @@ var common = {
 			}else {
 				$('.header').removeClass('fixed')
 			}
+			if ($(window).scrollTop() > 150) {
+				$('.scroll-trigger-js').addClass('show');
+				$('.callback-trigger-js').addClass('show');
+			}else {
+				$('.scroll-trigger-js').removeClass('show')
+				$('.callback-trigger-js').removeClass('show')
+			}
 		};
 		fixPanel();
 		$(window).scroll(function() {
@@ -45,6 +52,10 @@ var common = {
 				wrap.removeClass('active');
 				thisTrigger.text(hide)
 			}
+		});
+		$('.scroll-trigger-js').click(function(event){
+			event.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		});
 
 		// b-lazy
@@ -88,22 +99,9 @@ var common = {
 		$('.call-popup').click(function(event){
 			event.preventDefault();
 			var popup  = '#' + $(this).attr('data-popup');
-			if($(this).attr('data-popup') != 'polyticsPopup'){
-				$('.popup-wrapper').removeClass('active');
-				$('.header').removeClass('open');
-				$('body').addClass('hidden');
-				$(popup).fadeIn('fast')
-				if ($(window).width() < 993)  {
-					$('.header-bottom').slideUp('fast');
-				}
-			}else {
-				$(popup).fadeIn('fast')
-				$('header').removeClass('open');
-				if ($(window).width() < 993)  {
-					$('.header-bottom').slideUp('fast');
-				}
-			}
-
+			$(popup).addClass('active')
+			$('header').removeClass('open');		
+			$('body').addClass('hidden');		
 		});
 		
 		$('.popup-close').click(function(){
@@ -215,37 +213,20 @@ var common = {
 		
 	},
 	submit: function(){
-		$("form:not(.product-filter-checkers)").submit(function(event){
+		$("form").submit(function(event){
 			event.preventDefault();
-			formField = $(this).find(".required-field")
-			thanksTrigger = $(this).find('.thanks-page-trigger');
+			formGroup = $(this).find('.form-group');
 
-			console.log()
-			
-			formField.each(function(){
-				var thisEl = $(this);
-				if (! thisEl.val().length) {
-					thisEl.addClass('error')
-					setTimeout(function(){
-						thisEl.removeClass('error')
-					}, 3000)
-					thisEl.addClass('form-error')
-				}else { thisEl.removeClass('form-error')}
-			});	
-			if(formField.hasClass('form-error') == false){
-				if(!thanksTrigger.hasClass('thanks-page-trigger')) {
-					$('.popup-wrapper').hide();
+			setTimeout(function(){
+				if(!formGroup.hasClass('has-error')){
 					$('.popup-wrapper').removeClass('active');
-					$('#thanksPopup').fadeIn('fast');
+					$('#thanksPopup').addClass('active');
 					$('body').addClass('hidden');
 					var bLazy = new Blazy({});
-				}else {
-					window.location.href = "./thanks.html";
 				}
-			}
-		});
+			}, 100)
 
-		
+		});
 	},
 };
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
                                 <a href="blog.html">Блог</a>
                                 <a href="contacts.html">Контакты</a>
                             </nav>
-                            <a href="#" class="callback-tirger">Обратный звонок</a>
+                            <a href="#" class="callback-tirger call-popup" data-popup="callbackPopup">Обратный звонок</a>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                         <div class="header-menu-row header-bottom-row">
                             <a class="header-phone" href="tel:+380931331334">+38 093 133 133 4</a>
                             <p>Пн-Сб с 8:00 до 20:00</p>
-                            <a href="#" class="callback-tirger">Обратный звонок</a>
+                            <a href="#" class="callback-tirger call-popup" data-popup="callbackPopup">Обратный звонок</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                     <div class="wrapper">
                         <form action="#">
                             <div class="search-row">
-                                <select class="basic-select"   name="car" placeholder="Select a state">
+                                <select class="basic-select"   name="car">
                                     <option selected disabled value="0">Марка</option>
                                     <optgroup label="Грузовая">
                                       <option value="AK">BMW1</option>
@@ -841,29 +841,91 @@
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="footer-col footer-col-1 col-xs-12 col-md-4">
+                            <a href="index.html" class="logo"><img src="./images/logo.svg" alt="logo"></a>
+                            <p>Интернет-магазин разработан</p>
+                            <a href="#" class="logo2"><img src="./images/logo2.svg" alt="logo"></a>
+                        </div>
+                        <div class="footer-col footer-col-2 col-xs-6 col-md-3">
+                            <h3>Каталог</h3>
+                            <a href="#">Тормозные диски</a>
+                            <a href="#">Тормозные колодки</a>
+                        </div>
+                        <div class="footer-col footer-col-3 col-xs-6 col-md-2">
+                            <h3>Информация</h3>
+                            <a href="about.html">О нас</a>
+                            <a href="blog.html">Блог</a>
+                            <a href="contacts.html">Контакты</a>
+                        </div>
+                        <div class="footer-col footer-col-4 col-xs-12 col-md-3">
+                            <h3>Контакты</h3>
+                            <div class="link-trigger link-trigger-top">
+                                <div class="link-trigger-img"><img src="./images/tel.svg" alt="svg"></div>
+                                <div class="link-trigger-cnt">
+                                    <a href="tel:+380931331334">+38 093 133 133 4</a>
+                                    <p>Пн-Сб с 8:00 до 20:00</p>
+                                </div>
+                            </div>
+                            <a href="mailto:info@brakes-shop.com.ua" class="link-trigger">
+                                <span class="link-trigger-img"><img src="./images/mail.svg" alt="svg"></span>
+                                <span class="link-trigger-cnt">
+                                    <span>info@brakes-shop.com.ua</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="wrapper">
+                    <p>© Все права защищены.2009-2021</p>
+                </div>
+            </div>
+        </footer>
         
+        <a href="#" class="scroll-trigger-js">
+            <svg class="scroll-trigger" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="scroll-trigger-circle" cx="22" cy="22" r="21.4" transform="rotate(-90 22 22)" fill="#2D2C28" fill-opacity="0.45" stroke="#494949" stroke-width="1.2"/>
+                <path  class="scroll-trigger-circle-half" d="M0.599998 22.0005C0.599998 18.5737 1.42292 15.1971 2.99954 12.1545C4.57617 9.11201 6.86039 6.49259 9.66007 4.51661C12.4598 2.54062 15.693 1.26586 19.0879 0.799553C22.4828 0.333242 25.94 0.689017 29.1688 1.83695C32.3976 2.98489 35.3035 4.89141 37.642 7.39616C39.9806 9.90091 41.6835 12.9306 42.6075 16.2305C43.5314 19.5303 43.6494 23.0038 42.9515 26.3588C42.2536 29.7137 40.7602 32.852 38.597 35.5097" stroke="#A50000" stroke-width="1.2"/>
+                <path class="scroll-trigger-arrow" d="M22 17.9997C22.2336 17.9993 22.4601 18.0806 22.64 18.2297L28.64 23.2297C28.8442 23.3995 28.9726 23.6434 28.997 23.9078C29.0214 24.1722 28.9397 24.4355 28.77 24.6397C28.6002 24.8439 28.3563 24.9724 28.0919 24.9967C27.8275 25.0211 27.5642 24.9395 27.36 24.7697L22 20.2897L16.64 24.6097C16.5377 24.6928 16.42 24.7548 16.2936 24.7923C16.1673 24.8297 16.0348 24.8418 15.9038 24.8278C15.7728 24.8139 15.6458 24.7742 15.5301 24.711C15.4145 24.6479 15.3125 24.5625 15.23 24.4597C15.1384 24.3569 15.069 24.2363 15.0262 24.1054C14.9834 23.9745 14.9681 23.8362 14.9813 23.6992C14.9944 23.5621 15.0357 23.4292 15.1026 23.3089C15.1695 23.1885 15.2605 23.0833 15.37 22.9997L21.37 18.1697C21.5551 18.0442 21.7769 17.9844 22 17.9997Z" fill="white"/>
+            </svg>    
+        </a>
+        
+        <a href="#" class="callback-trigger-js call-popup" data-popup="callbackPopup">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="27" cy="27" r="27" fill="#A50000" fill-opacity="0.2"/>
+                <circle cx="27" cy="27" r="22" fill="#A50000"/>
+                <path d="M33.5 24.5625H31.875C31.8744 23.9162 31.6173 23.2966 31.1604 22.8396C30.7034 22.3827 30.0838 22.1256 29.4375 22.125V20.5C30.5145 20.5013 31.5471 20.9297 32.3087 21.6913C33.0703 22.4529 33.4987 23.4855 33.5 24.5625Z" fill="white"/>
+                <path d="M36.75 24.5625H35.125C35.1233 23.0546 34.5235 21.609 33.4573 20.5427C32.391 19.4765 30.9454 18.8767 29.4375 18.875V17.25C31.3762 17.2522 33.2349 18.0233 34.6058 19.3942C35.9767 20.7651 36.7478 22.6238 36.75 24.5625Z" fill="white"/>
+                <path d="M30.5205 31.4541L32.3405 29.6341C32.5841 29.3905 32.8939 29.2236 33.2314 29.1543C33.5689 29.085 33.9194 29.1162 34.2393 29.2441L36.4558 30.1314C36.7825 30.2621 37.0625 30.4877 37.2598 30.7791C37.457 31.0705 37.5625 31.4143 37.5625 31.7661V35.7969C37.563 36.0365 37.5147 36.2737 37.4204 36.4939C37.3262 36.7142 37.1879 36.9129 37.0142 37.0779C36.8405 37.2428 36.6349 37.3706 36.4101 37.4534C36.1853 37.5362 35.9459 37.5722 35.7067 37.5593C20.1701 36.5924 17.0322 23.4331 16.4496 18.394C16.4214 18.1477 16.4457 17.8981 16.5208 17.6618C16.596 17.4255 16.7203 17.2078 16.8856 17.023C17.0509 16.8382 17.2535 16.6904 17.48 16.5895C17.7065 16.4886 17.9518 16.4368 18.1998 16.4375H22.1591C22.5109 16.4375 22.8547 16.5429 23.1461 16.7402C23.4375 16.9374 23.6631 17.2174 23.7938 17.5441L24.6803 19.7606C24.8082 20.0806 24.8394 20.431 24.7701 20.7685C24.7008 21.1061 24.5339 21.4158 24.2903 21.6594L22.4703 23.4794C22.4703 23.4794 23.4794 30.5742 30.5205 31.4541Z" fill="white"/>
+            </svg>
+              
+        </a>
     </div>
-    <!-- <div id="callbackPopup" class="popup-wrapper modal">
+    <div id="callbackPopup" class="popup-wrapper modal">
         <div class="popup-layout">
             <div class="popup">
-                <div class="popup-head"><span>Заказать обратный звонок</span></div>
                 <div class="popup-cnt-wrap">
                     <div class="popup-cnt">
                         <div class="popup-cnt-form">
-                            <div class="form-title">Остались вопросы? <br>
-                                Мы перезвоним и ответим на них!</div>
-                            <form action="#">
-                                <label class="form-row">
-                                    <input class="form-field form-field-check required-field" type="text" name="name">
-                                    <span>Имя<span>*</span></span>
-                                </label>
-                                <input class="form-field tel-trigger form-field-check required-field" type="tel" name="tel" placeholder="+7 (">
-                                <div class="checker-name"> Нажимая на кнопку "Отправить", вы соглашаетесь c  <a class="politics-btn call-popup" data-popup="polyticsPopup" href="#">политикой обработки персональных данных</a></div>
-                                <button class="btn btn-big">Отправить <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/arrow-right-white.svg" alt="arrow"></button>
+                            <div class="form-title"><span>Оставить заявку</span></div>
+                            <form class="form" data-toggle="validator">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form-group">
+                                  <input type="tel" class="form-control" placeholder="Ваш телефон" required>
+                                </div>
+                                <button type="submit" class="btn btn-line"><span>Оставить заявку</span></button>
                             </form>
                         </div>
                     </div>
                 </div>
+                <div class="popup-bg"><img src="./images/popup-img.png" alt="images"></div>
                 <div class="popup-close"><img src="./images/close-btn.svg" alt="close"></div>
             </div>
         </div>
@@ -873,14 +935,17 @@
             <div class="popup popup-thanks">
                 <div class="popup-cnt-wrap">
                     <div class="popup-cnt">
-                        <div class="popup-img"><img src="./images/thanks.svg" alt="thanks"></div>
-                        <h5>Спасибо, данные успешно отправлены, мы свяжемся с вами в ближайшее время!</h5>
+                        <div class="popup-thanks-img">
+                            <img src="./images/thanks.svg" alt="thanks">
+                        </div>
+                        <div class="form-title"><span>Спасибо ваша заявка принята</span></div>
                     </div>
                 </div>
-                <div class="popup-close"><img src="./images/close-green.svg" alt="close"></div>
+                <div class="popup-bg"><img src="./images/popup-img.png" alt="images"></div>
+                <div class="popup-close"><img src="./images/close-btn.svg" alt="close"></div>
             </div>
         </div>
-    </div> -->
+    </div>
     
     <!--Libs-->
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -890,6 +955,7 @@
     <script src="js/libs/blazy/blazy.min.js"></script>
     <script src="js/libs/wow.min.js"></script>
     <script src="js/libs/select/select2.min.js"></script>
+    <script src="js/libs/validator/validator.min.js"></script>
     
     <!--general-->
     <script src="js/common.js"></script>

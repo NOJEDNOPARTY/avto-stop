@@ -1,24 +1,23 @@
-<!-- <div id="callbackPopup" class="popup-wrapper modal">
+<div id="callbackPopup" class="popup-wrapper modal">
     <div class="popup-layout">
         <div class="popup">
-            <div class="popup-head"><span>Заказать обратный звонок</span></div>
             <div class="popup-cnt-wrap">
                 <div class="popup-cnt">
                     <div class="popup-cnt-form">
-                        <div class="form-title">Остались вопросы? <br>
-                            Мы перезвоним и ответим на них!</div>
-                        <form action="#">
-                            <label class="form-row">
-                                <input class="form-field form-field-check required-field" type="text" name="name">
-                                <span>Имя<span>*</span></span>
-                            </label>
-                            <input class="form-field tel-trigger form-field-check required-field" type="tel" name="tel" placeholder="+7 (">
-                            <div class="checker-name"> Нажимая на кнопку "Отправить", вы соглашаетесь c  <a class="politics-btn call-popup" data-popup="polyticsPopup" href="#">политикой обработки персональных данных</a></div>
-                            <button class="btn btn-big">Отправить <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./images/arrow-right-white.svg" alt="arrow"></button>
+                        <div class="form-title"><span>Оставить заявку</span></div>
+                        <form class="form" data-toggle="validator">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                              <input type="tel" class="form-control" placeholder="Ваш телефон" required>
+                            </div>
+                            <button type="submit" class="btn btn-line"><span>Оставить заявку</span></button>
                         </form>
                     </div>
                 </div>
             </div>
+            <div class="popup-bg"><img src="./images/popup-img.png" alt="images"></div>
             <div class="popup-close"><img src="./images/close-btn.svg" alt="close"></div>
         </div>
     </div>
@@ -28,11 +27,14 @@
         <div class="popup popup-thanks">
             <div class="popup-cnt-wrap">
                 <div class="popup-cnt">
-                    <div class="popup-img"><img src="./images/thanks.svg" alt="thanks"></div>
-                    <h5>Спасибо, данные успешно отправлены, мы свяжемся с вами в ближайшее время!</h5>
+                    <div class="popup-thanks-img">
+                        <img src="./images/thanks.svg" alt="thanks">
+                    </div>
+                    <div class="form-title"><span>Спасибо ваша заявка принята</span></div>
                 </div>
             </div>
-            <div class="popup-close"><img src="./images/close-green.svg" alt="close"></div>
+            <div class="popup-bg"><img src="./images/popup-img.png" alt="images"></div>
+            <div class="popup-close"><img src="./images/close-btn.svg" alt="close"></div>
         </div>
     </div>
-</div> -->
+</div>

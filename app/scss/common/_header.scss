@@ -95,7 +95,7 @@
         z-index: 11;
         padding: 20px 0;
         @media (max-width: 767px) {
-            padding: 17px 0;
+            padding: 5px 0;
             border-bottom: 1px solid rgba(67, 67, 67, 0.76);
             background-color: #353535;
         }
@@ -235,7 +235,9 @@
     }
     &-menu {
         display: none;
-        height: calc(100vh - 83px);
+
+        height: calc(100vh - 60px);
+
         padding: 6px 0 55px;
         background: rgba(53, 53, 53, 0.9);
         backdrop-filter: blur(7px);
@@ -272,6 +274,7 @@
             }
             &.header-nav-row {
                 & a {
+                    display: block;
                     font-family: 'Gilroy SemiBold';
                     font-size: 16px;
                     line-height: 16px;
