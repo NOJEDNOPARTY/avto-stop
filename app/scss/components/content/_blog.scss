@@ -1,4 +1,5 @@
 .blog {
+    padding-bottom: 100px;
     &-prev {
         padding: 52px 0 76px;
         &-row {
@@ -37,12 +38,22 @@
                     width: 100%;
                     margin-bottom: 50px;
                 }
+                &-text {
+                    margin-top: 15px;
+                    font-family: 'Gilroy Regular';
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.05em;
+                    color: #000000;
+                }
                 &-img {
                     position: relative;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     width: 100%;
+                    // min-height: 290px;
+                    // max-height: 290px;
                     margin-bottom: 20px;
                     &::before {
                         content: '';
@@ -57,6 +68,7 @@
                         transition: 0.3s ease;
                     }
                     & img {
+                        position: relative;
                         max-width: 100%;
                         @media (max-width: 992px) {
                             width: 100%;
@@ -98,6 +110,13 @@
                             }
                         }
                     }
+                }
+            }
+            &-middle {
+                width: calc(calc(100% / 3) - 20px);
+                @media (max-width: 992px) {
+                    width: 100%;
+                    margin-bottom: 50px;
                 }
             }
             &-circle {
@@ -183,6 +202,27 @@
                     }
                 }
             }
+        }
+    }
+    &-list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        & .blog-prev-item-big {
+            margin-bottom: 50px;
+        }
+    }
+    &-item {
+        padding-bottom: 48px;
+        &-date {
+            margin-bottom: 10px;
+            font-family: 'Gilroy Bold';
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+            color: #A50000;
+
         }
     }
 }

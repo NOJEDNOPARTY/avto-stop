@@ -50,3 +50,17 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: 'Gilroy Heavy';
+    src: url('./fonts/gilroy/Gilroy-Heavy.eot');
+    src: url('./fonts/gilroy/Gilroy-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/gilroy/Gilroy-Heavy.woff2') format('woff2'),
+         url('./fonts/gilroy/Gilroy-Heavy.woff') format('woff'),
+         url('./fonts/gilroy/Gilroy-Heavy.ttf') format('truetype'),
+         url('./fonts/gilroy/Gilroy-Heavy.svg#Gilroy-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

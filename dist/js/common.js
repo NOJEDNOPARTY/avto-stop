@@ -95,6 +95,15 @@ var common = {
 			});
 		});
 
+		// rating item 
+
+
+		$('.rating:not(.rating-static) label').click(function(event){
+			event.preventDefault();
+			$(this).closest('.rating').find('label').removeClass('active')
+			$(this).addClass('active')
+		});
+
 		// popups call
 		$('.call-popup').click(function(event){
 			event.preventDefault();
@@ -107,6 +116,10 @@ var common = {
 		$('.popup-close').click(function(){
 			$(this).closest('.popup-wrapper').fadeOut('fast');
 			$('body').removeClass('hidden');
+		});
+		$('.filter-trigger').click(function(event){
+			event.preventDefault();
+			$(this).closest('.catalog-filter').toggleClass('open');
 		});
 
 		// phone mask

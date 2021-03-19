@@ -1,0 +1,52 @@
+.card {
+    &-seen {
+        padding-bottom: 100px;
+    }
+}
+
+
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    & label {
+        position: relative;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        & input {display: none;}
+        @media (max-width: 992px) {
+            width: 10px;
+            height: 10px;
+            padding: 2px;
+        }
+        & svg {
+            & path {
+                fill: #C4C4C4;
+                transition: 0.3s ease;
+            }
+        }
+        &.active svg path {
+            fill: #A50000;
+        }
+        &:nth-child(1) {order: 5;}
+        &:nth-child(2) {order: 4;}
+        &:nth-child(3) {order: 3;}
+        &:nth-child(4) {order: 2;}
+        &:nth-child(5) {order: 1;}
+    }
+    &:not(.rating-static) {
+        & label:hover svg path ,
+        & label.active ~ label svg path ,
+        & label:hover ~ label svg path  {
+            fill: #A50000;
+        }
+    }
+    & label.active ~ label svg path  {
+        fill: #A50000;
+    }
+}
