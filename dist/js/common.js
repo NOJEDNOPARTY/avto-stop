@@ -104,6 +104,12 @@ var common = {
 			$(this).addClass('active')
 		});
 
+		$('.show-reviews').click(function(event){
+			event.preventDefault();
+			$(this).closest('.reviews-list').toggleClass('active')
+			$(this).toggleClass('active')
+		});
+
 		// popups call
 		$('.call-popup').click(function(event){
 			event.preventDefault();
@@ -123,7 +129,7 @@ var common = {
 		});
 
 		// phone mask
-		$('.tel-trigger').mask("+7(999) 999-99-99");
+		$('.tel-trigger').mask("+380(99) 999-99-99");
 
 		$('.cart-trigger').on('click', function(e){
 			e.preventDefault();
@@ -162,28 +168,35 @@ var common = {
 
 	},
 	carousel: function(){
+		var bannerSlider = $('.banner-slider');
+
+		bannerSlider.owlCarousel({
+			loop:true,
+			items: 1,
+			margin:0,
+			nav: true,
+			dots: false,
+			autoHeight: true,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+		});
+
+		$('.owl-carousel').on('translated.owl.carousel', function(event) {
+			var bLazy = new Blazy({});
+		})
+
+
 		var cardImages = $('.card-slider-images');
 		var cardImagesDots = $('.card-slider-images-dots');
 
 		cardImagesDots.owlCarousel({
-			loop:false,
-			items: 4,
+			loop: false,
+			items: 5,
 			margin: 10,
 			nav: true,
 			dots: false,
 			animateOut: 'fadeOut',
 			animateIn: 'fadeIn',
-			responsive:{
-				0:{
-					items:2,
-				},
-				319:{
-					items:3
-				},
-				456:{
-					items:4
-				},
-			}
 		});
 
 		cardImages.owlCarousel({
@@ -201,27 +214,6 @@ var common = {
 		$('.card-slider-images-dots .owl-dot.card-slider-dots-img').click(function () {
 			cardImages.trigger('to.owl.carousel', [$(this).parent().index(), 300]);
 		});
-
-
-
-
-
-		var bannerSlider = $('.banner-slider');
-
-		bannerSlider.owlCarousel({
-			loop:true,
-			items: 1,
-			margin:0,
-			nav: true,
-			dots: false,
-			autoHeight: true,
-			animateOut: 'fadeOut',
-			animateIn: 'fadeIn',
-		});
-
-		$('.owl-carousel').on('translated.owl.carousel', function(event) {
-			var bLazy = new Blazy({});
-		})
 
 		
 	},
