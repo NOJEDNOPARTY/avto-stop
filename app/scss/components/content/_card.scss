@@ -535,10 +535,6 @@
                             width: 15px;
                             height: 15px;
                         }
-                        & path {
-                            fill: #C4C4C4;
-                            transition: 0.3s ease;
-                        }
                     }
                 }
             }
@@ -593,11 +589,11 @@
         & label:hover svg path ,
         & label.active ~ label svg path ,
         & label:hover ~ label svg path  {
-            fill: #A50000;
+            fill: #A50000 !important;
         }
     }
     & label.active ~ label svg path  {
-        fill: #A50000;
+        fill: #A50000 !important;
     }
 }
 

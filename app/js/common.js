@@ -120,7 +120,7 @@ var common = {
 		});
 		
 		$('.popup-close').click(function(){
-			$(this).closest('.popup-wrapper').fadeOut('fast');
+			$(this).closest('.popup-wrapper').removeClass('active');	
 			$('body').removeClass('hidden');
 		});
 		$('.filter-trigger').click(function(event){
@@ -220,14 +220,24 @@ var common = {
 	submit: function(){
 		$("form").submit(function(event){
 			event.preventDefault();
-			formGroup = $(this).find('.form-group');
-
+			var formGroup = $(this).find('.form-group');
+			var eventEl = $(this);
+			console.log(eventEl)
 			setTimeout(function(){
-				if(!formGroup.hasClass('has-error')){
-					$('.popup-wrapper').removeClass('active');
-					$('#thanksPopup').addClass('active');
-					$('body').addClass('hidden');
-					var bLazy = new Blazy({});
+				if(!formGroup.hasClass('has-error')) {
+					if(eventEl.hasClass('reviews-form')) {
+						console.log('1')
+						$('.popup-wrapper').removeClass('active');
+						$('#revThanksPopup').addClass('active');
+						$('body').addClass('hidden');
+						var bLazy = new Blazy({});
+					}else {
+						console.log('2')
+						$('.popup-wrapper').removeClass('active');
+						$('#thanksPopup').addClass('active');
+						$('body').addClass('hidden');
+						var bLazy = new Blazy({});
+					}
 				}
 			}, 100)
 
